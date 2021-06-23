@@ -55,8 +55,10 @@ public class DepartmentLifecycle {
 	}
 
 	void onStop(@Observes ShutdownEvent ev) {
-		consulClient.agentClient().deregister(instanceId);
-		LOGGER.info("Instance de-registered: id={}", instanceId);
+		if(instanceId != null) {
+			consulClient.agentClient().deregister(instanceId);
+			LOGGER.info("Instance de-registered: id={}", instanceId);
+		}
 	}
 
 }

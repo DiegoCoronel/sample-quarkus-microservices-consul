@@ -11,7 +11,7 @@ Currently you may find here some examples of microservices implementation using 
 1. Maven 3.6.3+
 2. JDK 11+
 3. Docker - run Consul:\
-$ docker run -d --name=consul -e CONSUL_BIND_INTERFACE=eth0 -p 8500:8500 consul
+$ docker run --rm --name consul -p 8500:8500 -p 8501:8501 consul:1.7 agent -dev -ui -client=0.0.0.0 -bind=0.0.0.0 --https-port=8501
 4. Run applications:
 $ mvn compile quarkus:dev
 

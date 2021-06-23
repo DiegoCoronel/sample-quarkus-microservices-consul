@@ -3,6 +3,7 @@ package pl.piomin.services.quarkus.organization.resource;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -32,6 +33,7 @@ public class OrganizationResource {
     EmployeeClient employeeClient;
 
     @POST
+    @Transactional
     public Organization add(@Valid Organization organization) {
         LOGGER.info("Organization add: {}", organization);
         repository.persist(organization);
