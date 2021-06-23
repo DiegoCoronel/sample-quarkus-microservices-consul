@@ -25,3 +25,7 @@ Our sample microservices-based system consists of the following modules:
 The following picture illustrates the architecture described above.
 
 <img src="https://i1.wp.com/piotrminkowski.com/wp-content/uploads/2020/11/quarkus-consul-arch.png?w=782&ssl=1" title="Architecture"><br/>
+
+## Blog
+
+https://piotrminkowski.com/2020/11/24/quarkus-microservices-with-consul-discovery/
